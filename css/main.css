@@ -1,0 +1,51 @@
+body {
+    font-size: x-large;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+header,
+footer {
+    background-color: rgb(103, 102, 103);
+    color: white;
+    text-align: center;
+    padding: 0.5em 0;
+}
+nav {
+    background-color: rgb(113, 181, 224);
+    padding-right: 2em;
+}
+main {
+    background-color: rgb(215, 214, 215);
+}
+aside {
+    background-color: rgb(255, 114, 44);
+    padding-right: 2em;
+}
+
+.main-view {
+    display: flex;
+    flex-grow: 1;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        height: auto;
+    }
+    .main-view {
+        flex-direction: column;
+    }
+    main {
+        order: 1;
+    }
+    aside {
+        order: 2;
+        text-align: center;
+        padding-right: 0;
+    }
+    nav {
+        order: 3;
+        text-align: center;
+        padding-right: 0;
+    }
+}
